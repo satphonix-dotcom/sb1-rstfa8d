@@ -7,10 +7,10 @@
   environment = { NODE_VERSION = "18.x" }
 
 [context.production.environment]
-  REACT_APP_API_URL = "https://api.velvetcoin.com"
+  REACT_APP_API_URL = "https://sb1-rstfa8d-7324796a0d62.herokuapp.com"
 
 [context.staging.environment]
-  REACT_APP_API_URL = "https://staging-api.velvetcoin.com"
+  REACT_APP_API_URL = "https://sb1-rstfa8d-7324796a0d62.herokuapp.com"
 
 [[redirects]]
   from = "/*"
@@ -24,4 +24,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; connect-src 'self' https: wss: https://sb1-rstfa8d-7324796a0d62.herokuapp.com;"
